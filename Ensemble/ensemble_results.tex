@@ -1,0 +1,43 @@
+\documentclass[12pt,a4paper]{article}
+
+% Required packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}       % For professional tables
+\usepackage{multirow}       % For multi-row cells
+\usepackage{array}          % For better column formatting
+\usepackage{graphicx}       % For graphics
+\usepackage{float}          % For table positioning
+\usepackage{geometry}       % For page margins
+\usepackage[table]{xcolor}  % For colored tables
+
+% Page setup
+\geometry{margin=1in}
+
+% Document information
+\title{Ensemble Model Performance Results}
+\author{Your Name}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Performance Results}
+
+\begin{table}[H]
+\centering
+\caption{Performance Comparison of Ensemble Learning Methods for Heart Disease Classification}
+\label{tab:ensemble_results}
+\begin{tabular}{lcccccc}
+\hline
+\textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{ROC-AUC} \\
+\hline
+Stacking (Diverse Base) & \textbf{0.9076} & \textbf{0.9126} & \textbf{0.9216} & \textbf{0.9171} & 0.9402 \\
+Stacking (LogReg Meta) & 0.9022 & 0.9038 & \textbf{0.9216} & 0.9126 & 0.9390 \\
+Soft Voting (All Models) & 0.9022 & 0.9118 & 0.9118 & 0.9118 & 0.9372 \\
+\hline
+\end{tabular}
+\end{table}
+
+\end{document}

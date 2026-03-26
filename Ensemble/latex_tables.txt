@@ -1,0 +1,229 @@
+===============================================================================
+LATEX TABLES FOR ENSEMBLE MODEL RESULTS
+===============================================================================
+
+===============================================================================
+TABLE 1: DETAILED PERFORMANCE METRICS
+===============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Performance Comparison of Ensemble Learning Methods for Heart Disease Classification}
+\label{tab:ensemble_results}
+\begin{tabular}{lcccccc}
+\hline
+\textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{ROC-AUC} \\
+\hline
+Stacking (Diverse Base) & \textbf{0.9076} & \textbf{0.9126} & \textbf{0.9216} & \textbf{0.9171} & 0.9402 \\
+Stacking (LogReg Meta) & 0.9022 & 0.9038 & \textbf{0.9216} & 0.9126 & 0.9390 \\
+Soft Voting (All Models) & 0.9022 & 0.9118 & 0.9118 & 0.9118 & 0.9372 \\
+\hline
+\end{tabular}
+\end{table}
+
+===============================================================================
+TABLE 2: DETAILED COMPARISON WITH PERCENTAGES
+===============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Ensemble Model Performance Analysis}
+\label{tab:ensemble_detailed}
+\begin{tabular}{lccccc}
+\hline
+\textbf{Ensemble Method} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{AUC} \\
+& \textbf{(\%)} & \textbf{(\%)} & \textbf{(\%)} & \textbf{(\%)} & \\
+\hline
+\multicolumn{6}{l}{\textit{Stacking Ensembles}} \\
+\quad Diverse Base Models & \textbf{90.76} & \textbf{91.26} & \textbf{92.16} & \textbf{91.71} & 0.9402 \\
+\quad LogReg Meta-Learner & 90.22 & 90.38 & \textbf{92.16} & 91.26 & 0.9390 \\
+\hline
+\multicolumn{6}{l}{\textit{Voting Ensembles}} \\
+\quad Soft Voting (All) & 90.22 & 91.18 & 91.18 & 91.18 & 0.9372 \\
+\hline
+\end{tabular}
+\end{table}
+
+===============================================================================
+TABLE 3: COMPACT COMPARISON (USING BOOKTABS)
+===============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Top Ensemble Models Performance}
+\label{tab:ensemble_compact}
+\small
+\begin{tabular}{@{}lrrrrr@{}}
+\toprule
+\textbf{Model} & \textbf{Acc.} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} & \textbf{AUC} \\
+\midrule
+Stacking (Diverse) & 90.76 & 91.26 & 92.16 & 91.71 & 94.02 \\
+Stacking (LogReg) & 90.22 & 90.38 & 92.16 & 91.26 & 93.90 \\
+Soft Voting & 90.22 & 91.18 & 91.18 & 91.18 & 93.72 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+===============================================================================
+TABLE 4: SIDE-BY-SIDE COMPARISON
+===============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Comparative Analysis of Ensemble Architectures}
+\label{tab:ensemble_comparison}
+\begin{tabular}{p{4.5cm}ccccc}
+\hline
+\multirow{2}{*}{\textbf{Ensemble Architecture}} & \multicolumn{5}{c}{\textbf{Performance Metrics}} \\
+\cline{2-6}
+& \textbf{Acc.} & \textbf{Prec.} & \textbf{Rec.} & \textbf{F1} & \textbf{AUC} \\
+\hline
+Stacking (Diverse Base Models) & 0.9076 & 0.9126 & 0.9216 & 0.9171 & 0.9402 \\
+Stacking (LogReg Meta-Learner) & 0.9022 & 0.9038 & 0.9216 & 0.9126 & 0.9390 \\
+Soft Voting (All Models) & 0.9022 & 0.9118 & 0.9118 & 0.9118 & 0.9372 \\
+\hline
+\end{tabular}
+\end{table}
+
+===============================================================================
+TABLE 5: WITH HIGHLIGHTED BEST VALUES
+===============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Ensemble Model Performance with Highlighted Best Scores}
+\label{tab:ensemble_highlight}
+\begin{tabular}{lccccc}
+\hline
+\textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{ROC-AUC} \\
+\hline
+Stacking (Diverse) & \textbf{0.9076} & \textbf{0.9126} & \textbf{0.9216} & \textbf{0.9171} & \textbf{0.9402} \\
+Stacking (LogReg) & 0.9022 & 0.9038 & \textbf{0.9216} & 0.9126 & 0.9390 \\
+Soft Voting (All) & 0.9022 & 0.9118 & 0.9118 & 0.9118 & 0.9372 \\
+\hline
+\multicolumn{6}{l}{\footnotesize \textit{Bold values indicate best performance for each metric.}} \\
+\end{tabular}
+\end{table}
+
+===============================================================================
+REQUIRED LATEX PACKAGES (ADD TO PREAMBLE)
+===============================================================================
+
+\usepackage{booktabs}  % For professional tables with \toprule, \midrule, \bottomrule
+\usepackage{multirow}  % For multi-row cells
+\usepackage{array}     % For better column formatting
+
+===============================================================================
+ALTERNATIVE TABLE 6: COMPREHENSIVE WITH ALL DETAILS
+===============================================================================
+
+\begin{table}[htbp]
+\centering
+\caption{Comprehensive Performance Metrics of Ensemble Learning Approaches}
+\label{tab:ensemble_comprehensive}
+\begin{tabular}{p{5cm}ccccc}
+\toprule
+\textbf{Ensemble Method} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{ROC-AUC} \\
+\midrule
+\multicolumn{6}{l}{\textit{\textbf{Stacking Ensembles}}} \\
+\quad Diverse Base Models & \textbf{0.9076} & \textbf{0.9126} & \textbf{0.9216} & \textbf{0.9171} & \textbf{0.9402} \\
+\quad LogReg Meta-Learner & 0.9022 & 0.9038 & \textbf{0.9216} & 0.9126 & 0.9390 \\
+\midrule
+\multicolumn{6}{l}{\textit{\textbf{Voting Ensembles}}} \\
+\quad Soft Voting (All Models) & 0.9022 & 0.9118 & 0.9118 & 0.9118 & 0.9372 \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize \textbf{Note:} Bold values indicate best performance for each metric.} \\
+\end{tabular}
+\end{table}
+
+===============================================================================
+LANDSCAPE TABLE (FOR WIDE TABLES)
+===============================================================================
+
+% Add to preamble: \usepackage{pdflscape}
+
+\begin{landscape}
+\begin{table}[htbp]
+\centering
+\caption{Detailed Ensemble Model Performance Comparison (Landscape)}
+\label{tab:ensemble_landscape}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Ensemble Architecture} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{ROC-AUC} & \textbf{Description} \\
+\midrule
+Stacking (Diverse Base) & \textbf{0.9076} & \textbf{0.9126} & \textbf{0.9216} & \textbf{0.9171} & \textbf{0.9402} & XGB, CatBoost, RF, LogReg, SVC, KNN \\
+Stacking (LogReg Meta) & 0.9022 & 0.9038 & \textbf{0.9216} & 0.9126 & 0.9390 & All 8 base models + LogReg meta \\
+Soft Voting (All) & 0.9022 & 0.9118 & 0.9118 & 0.9118 & 0.9372 & All 9 models with soft voting \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+===============================================================================
+TWO-COLUMN TABLE (FOR ACADEMIC PAPERS)
+===============================================================================
+
+\begin{table*}[htbp]
+\centering
+\caption{Performance Comparison of Ensemble Learning Methods for Heart Disease Classification}
+\label{tab:ensemble_twocol}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{AUC} \\
+\midrule
+Stacking (Diverse Base Models) & \textbf{90.76\%} & \textbf{91.26\%} & \textbf{92.16\%} & \textbf{91.71\%} & \textbf{0.9402} \\
+Stacking (LogReg Meta-Learner) & 90.22\% & 90.38\% & \textbf{92.16\%} & 91.26\% & 0.9390 \\
+Soft Voting (All Models) & 90.22\% & 91.18\% & 91.18\% & 91.18\% & 0.9372 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+===============================================================================
+COLORED TABLE (REQUIRES XCOLOR PACKAGE)
+===============================================================================
+
+% Add to preamble: \usepackage[table]{xcolor}
+
+\begin{table}[htbp]
+\centering
+\caption{Ensemble Model Performance with Color Coding}
+\label{tab:ensemble_colored}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1} & \textbf{AUC} \\
+\midrule
+\rowcolor{green!20} Stacking (Diverse) & \textbf{0.9076} & \textbf{0.9126} & \textbf{0.9216} & \textbf{0.9171} & \textbf{0.9402} \\
+Stacking (LogReg) & 0.9022 & 0.9038 & \textbf{0.9216} & 0.9126 & 0.9390 \\
+Soft Voting (All) & 0.9022 & 0.9118 & 0.9118 & 0.9118 & 0.9372 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+===============================================================================
+USAGE INSTRUCTIONS
+===============================================================================
+
+1. Copy the desired table code above
+2. Add required packages to your LaTeX preamble:
+   \usepackage{booktabs}
+   \usepackage{multirow}
+   \usepackage{array}
+   
+3. Paste the table code in your document body
+4. Compile your LaTeX document
+5. Reference the table in text using \ref{tab:ensemble_results}
+
+===============================================================================
+CUSTOMIZATION TIPS
+===============================================================================
+
+- Change caption: Edit text in \caption{...}
+- Change label: Edit text in \label{...}
+- Adjust column alignment: Change c (center), l (left), r (right) in \begin{tabular}{...}
+- Add vertical lines: Use | in \begin{tabular}{l|c|c|c}
+- Adjust spacing: Use \arraystretch or \setlength{\tabcolsep}{...}
+- Change font size: Add \small, \footnotesize, or \tiny after \begin{table}
+
+===============================================================================
+END OF LATEX TABLES
+===============================================================================
